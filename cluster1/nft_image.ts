@@ -19,10 +19,10 @@ umi.use(signerIdentity(signer));
 
 (async () => {
   try {
-    const file = "../image/generug.png";
+    const file = "./images/generug.png";
     const fileBuffer = await readFile(file);
 
-    const image = createGenericFile(fileBuffer, "GeneRug");
+    const image = createGenericFile(fileBuffer, "generug");
 
     const [myUri] = await bundlrUploader.upload([image]);
     console.log("Your image URI: ", myUri);
